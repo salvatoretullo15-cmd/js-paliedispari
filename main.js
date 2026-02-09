@@ -19,3 +19,18 @@ Domande da  farsi quando si crea una funzione:
 3-Devo restituire un valore?,
 4-Se sì, di che tipo?,
 */
+
+
+/*Pari e Dispari
+L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
+Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+Sommiamo i due numeri
+Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+Dichiariamo chi ha vinto.
+*/
+
+//L’utente sceglie pari o dispari
+const user_choice= prompt("even or odd")
+//L’utente inserisce un numero da 1 a 5
+const user_Number= Number(prompt("choose a number between 1 and 5"))
+console.log(user_choice,user_Number);
