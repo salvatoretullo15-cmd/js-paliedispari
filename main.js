@@ -34,3 +34,10 @@ const user_choice= prompt("even or odd")
 //L’utente inserisce un numero da 1 a 5
 const user_Number= Number(prompt("choose a number between 1 and 5"))
 console.log(user_choice,user_Number);
+//Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione)
+function getRndInteger(min , max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+let pc_number = getRndInteger(1, 5);
+
+console.log(pc_number);
