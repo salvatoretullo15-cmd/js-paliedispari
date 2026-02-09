@@ -47,14 +47,31 @@ let som_Number = user_Number + pc_number
 console.log(som_Number);
 
 //Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+
 function getEvenOrOdd() {
-    if ( som_Number %2===0 ) {
+    const is_Even=false;
+
+    if ( som_Number %2==0 ) {
+       is_Even=true
         console.log("Even");
         
     } 
     else  {
+        
         console.log("Odd");
     
     } 
+    return is_Even
 }
-getEvenOrOdd();
+
+//Dichiariamo chi ha vinto
+let message
+if (user_choice == "even" && getEvenOrOdd() == true ) {
+    message="player win"
+} else if(user_choice == "odd" && getEvenOrOdd() == false){
+    message="player win"
+} else {
+    message="you lose"
+}
+    
+console.log(message);
