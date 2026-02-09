@@ -41,3 +41,20 @@ function getRndInteger(min , max) {
 let pc_number = getRndInteger(1, 5);
 
 console.log(pc_number);
+
+//Sommiamo i due numeri
+let som_Number = user_Number + pc_number
+console.log(som_Number);
+
+//Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
+function getEvenOrOdd() {
+    if ( som_Number %2===0 ) {
+        console.log("Even");
+        
+    } 
+    else  {
+        console.log("Odd");
+    
+    } 
+}
+getEvenOrOdd();
