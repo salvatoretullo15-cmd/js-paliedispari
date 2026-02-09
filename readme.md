@@ -1,4 +1,4 @@
-/*Palidroma
+Palidroma
 Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma
 
@@ -18,4 +18,3 @@ Domande da  farsi quando si crea una funzione:
 2-Ho bisogno di parametri?,
 3-Devo restituire un valore?,
 4-Se sì, di che tipo?,
-*/
