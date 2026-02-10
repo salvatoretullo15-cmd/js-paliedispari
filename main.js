@@ -49,10 +49,10 @@ console.log(som_Number);
 //Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 
 function getEvenOrOdd() {
+    
     const is_Even=false;
-
     if ( som_Number %2==0 ) {
-       is_Even=true
+        is_Even="true";
         console.log("Even");
         
     } 
@@ -75,3 +75,9 @@ if (user_choice == "even" && getEvenOrOdd() == true ) {
 }
     
 console.log(message);
+
+
+//Chiedere all’utente di inserire una parola
+const user_Word=prompt("inserisci una parola")
+console.log(user_Word);
+//Creare una funzione per capire se la parola inserita è palindroma
