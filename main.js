@@ -86,24 +86,103 @@ Creare una funzione per capire se la parola inserita è palindroma
 
 //Chiedere all’utente di inserire una parola
 
-const user_Word=prompt("inserisci una parola")
-console.log(user_Word);
+//const user_Word=prompt("inserisci una parola")
+const word=""
 
 //Creare una variabile per salvare la parola dell'utente
-//[split]la porla in una sequenza di caratteri in un array
-//creare un loop per ogni interazione 
-//prendi il character e push nello split_arrey
+
+function splitted_Word(word_to_split) {
+    
+    //prendi il character e push nello splarrey
+    const spl_array = []
+    //creare un loop per ogni interazione 
+    //[split]la parola in una sequenza di caratteri in un array
+    for (let i = 0; i < word_to_split.length; i++){
+        const char = word_to_split [i]
+        console.log(char);
+        spl_array.push(char)
+    }
+
+    //console.log(spl_array);
+    //restituire splitted_word
+    return spl_array
+}
+
+const splitt_Array = splitted_Word(word)  //cosi ci restituisce la nostra parola in un array separata parola per parola
+console.log(splitt_Array);               
 
 //[reverse]l'array del character
 //loop over the array from the end
 //prendi il character e immagazinalo nel reversed array
+function array_reversed(splitt_Array){  //qui e diventato il parametro 
+                                        //della nostra seconda funzione
+    
+    const reversal_array=[]
+    for (let i = splitt_Array.length - 1; i >=0; i--) {
+        const char = splitt_Array[i];
+        reversal_array.push(char)
+    }
+    
+    //console.log(reversal_array);
+    //restituire reversal_array
+    return reversal_array
+
+}
+
+const reversal_array = array_reversed(splitt_Array)
+console.log(reversal_array);
+
 
 //[join]the array in una stringa
-//loop over the reversed_array and
+//loop over the reversal_array and
 //immagazina character indietro in plain string con strings concatenation
+function join_String(reversal_array) {
+
+
+    let joinString=""
+
+    for (let i = 0; i < reversal_array.length; i++) {
+        const char = reversal_array[i];
+        joinString += char
+    }
+
+    //console.log(joinString);
+    //restituire joinString
+    return joinString
+    
+}
+
+const joinString= join_String(reversal_array)
+console.log(joinString);
 
 //controllare se la parola reversata e uguale alla parola originale 
 //controllare se e true
 //its a palindrome
 //otherwise
 //non at a palindrome
+
+function getPalindrom(word) {
+    //qui dividiamo la nostra parola
+    const splitte_Word=splitted_Word(word)
+    console.log(splitte_Word);
+    //qui rendiamo la parola al contrario
+    const rev_array=array_reversed(splitted_Word)
+    console.log(rev_array);
+    //qui aggiungiamo la nostra parola al nostro array
+    const reversal_array=join_String(rev_array)
+    console.log(reversal_array);
+    
+    //qui iniziamo la nostra condizione
+    if ( word.toLowerCase() === reversal_array.toLowerCase ) {
+        //qui se entra in questa condizione ci dara true
+        return true
+    } 
+    //qui se entra in questa condizione ci dara false
+    return false
+}
+
+if (getPalindrom(word)) {
+    console.log("your word is a palindrome",word);
+}else{
+    console.log("your word is not a palindrome",word);
+}
